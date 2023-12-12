@@ -173,7 +173,7 @@ public class FieldPropertyDeserializerTest {
         assertThat(obj.getNoLabel()).isTrue();
         assertThat(obj.getRequired()).isTrue();
         assertThat(obj.getUnique()).isTrue();
-        assertThat(obj.getDefaultValue()).isEqualTo(LocalDate.of(2020, 11, 12));
+        assertThat(obj.getDefaultValue()).isEqualTo("2020-11-12");
         assertThat(obj.getDefaultNowValue()).isFalse();
     }
 
@@ -191,8 +191,7 @@ public class FieldPropertyDeserializerTest {
         assertThat(obj.getNoLabel()).isFalse();
         assertThat(obj.getRequired()).isFalse();
         assertThat(obj.getUnique()).isFalse();
-        assertThat(obj.getDefaultValue())
-                .isEqualTo(ZonedDateTime.of(2020, 1, 1, 1, 30, 0, 0, ZoneOffset.UTC));
+        assertThat(obj.getDefaultValue()).isEqualTo("2020-01-01T01:30:00.000Z");
         assertThat(obj.getDefaultNowValue()).isFalse();
     }
 

@@ -41,7 +41,9 @@ public class DateTimeFieldProperty implements FieldProperty {
     private Boolean unique;
 
     /** The default value. */
-    private ZonedDateTime defaultValue;
+    // avoid json parser error
+    // refs: https://github.com/kintone/kintone-java-client/pull/47#issuecomment-1851164638
+    private String defaultValue;
 
     /**
      * The "Default to the record creation date" option.
