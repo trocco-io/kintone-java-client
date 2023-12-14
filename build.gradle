@@ -6,7 +6,7 @@ plugins {
     id 'com.github.hierynomus.license' version '0.16.1'
 }
 
-version = '1.4.1'
+version = '1.4.1-trocco-0.0.1'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -162,3 +162,5 @@ publishing {
 signing {
     sign publishing.publications.mavenJava
 }
+
+apply from: 'gpr.gradle'
